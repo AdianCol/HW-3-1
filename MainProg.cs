@@ -23,7 +23,11 @@ class Program
         JaggedArray jaggedArray = new JaggedArray(4);
         jaggedArray.Print();
         Console.WriteLine($"Average value: {jaggedArray.AverageValue()}");
-        Console.WriteLine($"Average value in sub-arrays: {jaggedArray.AverageValueInSubArrays()}");
+        Console.Write("Average value in sub-arrays: ");
+        foreach (var i in jaggedArray.AverageValueInSubArrays()){
+            Console.Write(i + "; ");
+        }
+        System.Console.WriteLine();
         jaggedArray.ChangeEvenElements();
         jaggedArray.Print();
     }

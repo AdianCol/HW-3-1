@@ -71,16 +71,14 @@
         return sum / count;
     }
 
-    public double AverageValueInSubArrays()
+    public double[] AverageValueInSubArrays()
     {
-        double sum = 0;
-        int count = 0;
+        double[] aver = new double[array.Length];
         for (int i = 0; i < array.Length; i++)
         {
-            sum += array[i].Average();
-            count += 1;
+            aver[i]= array[i].Average();
         }
-        return sum / count;
+        return aver;
     }
 
     public void ChangeEvenElements()
