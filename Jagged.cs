@@ -30,8 +30,7 @@
 
     public void FillWithUserInput()
     {
-        Console.WriteLine("Enter the elements of the array
-                          :");
+        Console.WriteLine("Enter the elements of the array:");
         for (int i = 0; i < array.Length; i++)
         {
             System.Console.Write("Length of line:");
