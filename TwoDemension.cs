@@ -5,19 +5,19 @@ public class MultiDimensionalArray
 
     public MultiDimensionalArray(int rows, int columns, bool fillWithUserInput = false)
     {
-        array = new int[rows, columns];
         if (fillWithUserInput)
         {
-            FillWithUserInput();
+            FillWithUserInput(rows, columns);
         }
         else
         {
-            FillWithRandomValues();
+            FillWithRandomValues(rows, columns);
         }
     }
 
-    public void FillWithRandomValues()
+    public void FillWithRandomValues(int rows, int columns)
     {
+        array = new int[rows, columns];
         var random = new Random();
         for (int i = 0; i < array.GetLength(0); i++)
         {
@@ -28,8 +28,9 @@ public class MultiDimensionalArray
         }
     }
 
-    public void FillWithUserInput()
+    public void FillWithUserInput(int rows, int columns)
     {
+        array = new int[rows, columns];
         Console.WriteLine("Enter the elements of the array:");
         for (int i = 0; i < array.GetLength(0); i++)
         {

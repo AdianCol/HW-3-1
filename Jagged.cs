@@ -1,22 +1,23 @@
-﻿public class JaggedArray
+﻿using System;
+public class JaggedArray
 {
     private int[][] array;
 
     public JaggedArray(int length, bool fillWithUserInput = false)
     {
-        array = new int[length][];
         if (fillWithUserInput)
         {
-            FillWithUserInput();
+            FillWithUserInput(length);
         }
         else
         {
-            FillWithRandomValues();
+            FillWithRandomValues(length);
         }
     }
 
-    public void FillWithRandomValues()
+    public void FillWithRandomValues(int length)
     {
+        array = new int[length][];
         var random = new Random();
         for (int i = 0; i < array.Length; i++)
         {
@@ -28,14 +29,15 @@
         }
     }
 
-    public void FillWithUserInput()
+    public void FillWithUserInput(int length)
     {
+        array = new int[length][];
         Console.WriteLine("Enter the elements of the array:");
         for (int i = 0; i < array.Length; i++)
         {
-            System.Console.Write("Length of line:");
+            Console.Write("Length of line:");
             int nn = int.Parse(Console.ReadLine());
-            System.Console.WriteLine("Now elements:");
+            Console.WriteLine("Now elements:");
             array[i] = new int[nn];
             for (int j = 0; j < nn; j++)
             {

@@ -6,19 +6,19 @@ public class OneDimensionalArray
 
     public OneDimensionalArray(int length, bool fillWithUserInput = false)
     {
-        array = new int[length];
         if (fillWithUserInput)
         {
-            FillWithUserInput();
+            FillWithUserInput(length);
         }
         else
         {
-            FillWithRandomValues();
+            FillWithRandomValues(length);
         }
     }
 
-    public void FillWithRandomValues()
+    public void FillWithRandomValues(int length)
     {
+        array = new int[length];
         var random = new Random();
         for (int i = 0; i < array.Length; i++)
         {
@@ -26,8 +26,9 @@ public class OneDimensionalArray
         }
     }
 
-    public void FillWithUserInput()
+    public void FillWithUserInput(int length)
     {
+        array = new int[length];
         Console.WriteLine("Enter the elements of the array:");
         for (int i = 0; i < array.Length; i++)
         {
