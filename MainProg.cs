@@ -27,7 +27,7 @@ class Program
         foreach (var i in jaggedArray.AverageValueInSubArrays()){
             Console.Write(i + "; ");
         }
-        System.Console.WriteLine();
+        Console.WriteLine();
         jaggedArray.ChangeEvenElements();
         jaggedArray.Print();
     }
